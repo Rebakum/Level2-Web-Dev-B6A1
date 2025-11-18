@@ -36,6 +36,8 @@ TypeScript-এ **Type Aliases** হলো এমন একটি ফিচার
 
 ### উদাহরণ
 
+```
+
 type ID = string | number;
 
 type Point = [number, number];
@@ -146,6 +148,8 @@ keyof
 
 object-এর সব key-কে একত্রে একটি বিশেষ union type বানায়
 ভুল property access করা থেকে আমাদের বাঁচায় |
+
+```
 
 ```
 

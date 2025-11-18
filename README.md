@@ -44,6 +44,10 @@ type Point = [number, number];
 
 ```
 
+```
+
+```
+
 ## Interface vs Type (Comparison Table)
 
 TypeScript-এ Interface এবং Type-এর মধ্যে কিছু গুরুত্বপূর্ণ পার্থক্য আছে।
@@ -148,10 +152,6 @@ keyof
 
 object-এর সব key-কে একত্রে একটি বিশেষ union type বানায়
 ভুল property access করা থেকে আমাদের বাঁচায় |
-
-```
-
-```
 
 ```
 

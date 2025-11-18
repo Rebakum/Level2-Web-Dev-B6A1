@@ -42,11 +42,7 @@ type ID = string | number;
 
 type Point = [number, number];
 
-```
 
-```
-
-```
 
 ## Interface vs Type (Comparison Table)
 
@@ -155,5 +151,6 @@ object-এর সব key-কে একত্রে একটি বিশেষ 
 
 ```
 
+```
 
 ```

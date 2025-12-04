@@ -96,7 +96,7 @@ class Person {
     this.age = age;
   }
   getDetails() {
-    return `name: ${this.name}, Age: ${this.age}`;
+    return `Name: ${this.name}, Age: ${this.age}`;
   }
 }
 const person1 = new Person("John Doe", 30);
@@ -221,7 +221,7 @@ function printBookDetails(book: Book) {
   const AvailableText = book.isAvailable ? "Yes" : "No";
 
   console.log(
-    ` Title: ${book.title} , Author: ${book.author} , Publish ${book.publishedYear}, Avilable: ${book.isAvailable}`
+    ` Title: ${book.title} , Author: ${book.author} , Publish ${book.publishedYear}, Avilable: ${AvailableText}`
   );
 }
 

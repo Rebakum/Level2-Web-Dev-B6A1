@@ -66,6 +66,8 @@ TypeScript-এ **interface** বারবার declare করলে সেগ�
 
 ```
 
+```
+
 interface Car {
 brand: string;
 }
@@ -75,6 +77,7 @@ model: string;
 }
 
 const c: Car = { brand: "Toyota", model: "Corolla" }
+
 ```
 
 ## keyof:
@@ -94,6 +97,8 @@ publishedYear: number;
 type BookKeys = keyof Book;
 এখন BookKeys এর মান হবে:
 "title" | "author" | "publishedYear"
+
+
 
 ## keyof এর বাস্তব ব্যবহার (Real Example)
 
@@ -118,6 +123,8 @@ console.log(getBookValue(myBook, "author"));
 "price" দিলে error দেবে
 কারণ price বইয়ের structure-এর অংশ নয়
 
+
+
 ## সারসংক্ষেপ (Summary)
 
 Interface
@@ -139,9 +146,7 @@ object-এর সব key-কে একত্রে একটি বিশেষ 
 ---
 
 ## 2. What is the use of the keyof keyword in TypeScript? Provide an example.
-
 ## TypeScript এ keyof কী এবং কীভাবে ব্যবহার করবেন ?
-
 TypeScript একটি শক্তিশালী টাইপ সিস্টেম দেয় যা আমাদের কোডকে নিরাপদ এবং bug-free রাখে। এর মধ্যে keyof keyword হলো একটি বিশেষ feature যা object type-এর সব key কে union type হিসেবে রিটার্ন করে।
 এটি মূলত type-safe property access করার জন্য ব্যবহার করা হয়।
 
@@ -152,62 +157,64 @@ TypeScript একটি শক্তিশালী টাইপ সিস্ট
 Generic বা reusable function তৈরি করতে সহজ হয়।
 
 ## উদাহরণ ১: Basic ব্যবহার
-
 ```
+
 interface Book {
-  title: string;
-  author: string;
-  publishedYear: number;
+title: string;
+author: string;
+publishedYear: number;
 }
- keyof ব্যবহার করে সব key-এর union type তৈরি
+keyof ব্যবহার করে সব key-এর union type তৈরি
 type BookKeys = keyof Book;
 BookKeys = "title" | "author" | "publishedYear"
 
 এখানে, BookKeys হলো "title" | "author" | "publishedYear"।
-```
 
+```
 এটি আমাদের বলে দেয় Book interface-এ কোন কোন property আছে।
 
 ## উদাহরণ ২: Generic function সহ ব্যবহার
-
 ```
+
 interface Book {
-  title: string;
-  author: string;
-  publishedYear: number;
+title: string;
+author: string;
+publishedYear: number;
 }
 
 function getBookValue(book: Book, key: keyof Book) {
-  return book[key];
+return book[key];
 }
 
 const myBook: Book = {
-  title: "The Great Gatsby",
-  author: "F. Scott Fitzgerald",
-  publishedYear: 1925,
+title: "The Great Gatsby",
+author: "F. Scott Fitzgerald",
+publishedYear: 1925,
 };
 
- সঠিক ব্যবহার
+সঠিক ব্যবহার
 console.log(getBookValue(myBook, "author"));
 আউটপুট: F. Scott Fitzgerald
 
- ভুল ব্যবহার (TypeScript error)
+ভুল ব্যবহার (TypeScript error)
 console.log(getBookValue(myBook, "price"));
- Error: "price" Book-এর key নয়
+Error: "price" Book-এর key নয়
+
 ```
 
 ## keyof ব্যবহার করার সুবিধা :
-
 Type Safety: ভুল key ব্যবহার করা থেকে রক্ষা করে।
 Code Reusability: Generic function সহজে লেখা যায়।
 Autocomplete Support: IDE-তে auto-suggestion সুবিধা দেয়।
 Error Prevention: Runtime error কমায়।
 
-## সংক্ষেপে:
 
+## সংক্ষেপে:
 keyof হলো TypeScript-এর একটি শক্তিশালী keyword, যা object type-এর key গুলোকে type হিসেবে ব্যবহার করার সুযোগ দেয়।
 এটি বিশেষভাবে type-safe code লেখার জন্য এবং generic functions তৈরিতে খুব উপকারী।
-
 ## Tip:
-
 keyof প্রায় সব interface বা object type-এ ব্যবহার করা যায়। এটি TypeScript কোডকে আরো robust এবং bug-free করে।
+
+
+
+```

@@ -105,7 +105,7 @@ console.log(person1.getDetails());
 const person2 = new Person("Alice", 25);
 console.log(person2.getDetails());
 
-/**
+/*
 Problem 4:
 Create a function filterByRating that accepts an array of items, where each item has the following properties:
 
